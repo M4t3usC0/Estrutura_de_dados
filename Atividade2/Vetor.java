@@ -1,22 +1,22 @@
-package Atividade1;
+package Atividade2;
 
 import java.util.function.ToDoubleFunction;
 
 public class Vetor {
-        private Aluno[] alunos = new Aluno[100];
+        private PlanoCartesiano[] alunos = new PlanoCartesiano[100];
         private int totalDeAlunos = 0;
 
     public Vetor () {
-        alunos = new Aluno[100];
+        alunos = new PlanoCartesiano[100];
     }
     
-        public void adiciona(Aluno aluno) {
+        public void adiciona(PlanoCartesiano aluno) {
         this.alunos[this.totalDeAlunos] = aluno;
         this.totalDeAlunos++;
         
         }
 
-        public void remove(Aluno aluno){
+        public void remove(PlanoCartesiano aluno){
             int indice = this.indiceDo(aluno);
             if (indice == this.totalDeAlunos-1){
                 this.alunos[indice]= null;
@@ -35,7 +35,7 @@ public class Vetor {
            return this.totalDeAlunos;
         }
 
-        public boolean contem (Aluno aluno){
+        public boolean contem (PlanoCartesiano aluno){
             for (int i = 0; i < this.totalDeAlunos; i++) {
                 if (aluno.equals(this.alunos[i])) {
                     return true;
@@ -44,7 +44,7 @@ public class Vetor {
             return false;
         }
 
-        public int indiceDo (Aluno aluno){
+        public int indiceDo (PlanoCartesiano aluno){
             for (int i = 0; i < this.totalDeAlunos; i++) {
                 if (aluno.equals(this.alunos[i])) {
                     return i;

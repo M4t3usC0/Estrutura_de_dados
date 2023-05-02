@@ -6,14 +6,14 @@ public class Main{
 
 public static void main(String[] args) {
 
-    Vetor vetor = new Vetor();
-Aluno aluno1 = new Aluno("Gabriel",20,10);
-Aluno aluno2 = new Aluno("Mudinho",20,10);
-Aluno aluno3 = new Aluno("Pedro",20,10);
-Aluno aluno4 = new Aluno("Mateus",20,10);
-Aluno aluno5 = new Aluno("Tales",20,10);
-Aluno aluno6 = new Aluno("Maria", 15, 9);
-Aluno aluno7 = new Aluno("Joao", 18, 8);
+    PontoCartesiano vetor = new PontoCartesiano();
+PlanoCartesiano aluno1 = new PlanoCartesiano("Gabriel",20,10);
+PlanoCartesiano aluno2 = new PlanoCartesiano("Mudinho",20,10);
+PlanoCartesiano aluno3 = new PlanoCartesiano("Pedro",20,10);
+PlanoCartesiano aluno4 = new PlanoCartesiano("Mateus",20,10);
+PlanoCartesiano aluno5 = new PlanoCartesiano("Tales",20,10);
+PlanoCartesiano aluno6 = new PlanoCartesiano("Maria", 15, 9);
+PlanoCartesiano aluno7 = new PlanoCartesiano("Joao", 18, 8);
 
 vetor.adiciona(aluno1);
 vetor.adiciona(aluno2);
