@@ -1,4 +1,4 @@
-package Atividade2;
+package Atividade1;
 
 public class Main {
 

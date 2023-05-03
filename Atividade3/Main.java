@@ -1,4 +1,4 @@
-package Atividade2;
+package Atividade3;
 import java.util.Scanner;
 
 
@@ -15,27 +15,28 @@ PlanoCartesiano aluno5 = new PlanoCartesiano("Tales",20,10);
 PlanoCartesiano aluno6 = new PlanoCartesiano("Maria", 15, 9);
 PlanoCartesiano aluno7 = new PlanoCartesiano("Joao", 18, 8);
 
-vetor.adiciona(aluno1);
-vetor.adiciona(aluno2);
-vetor.adiciona(aluno3);
-vetor.adiciona(aluno4);
-vetor.adiciona(aluno5);
-vetor.adiciona(aluno6);
-vetor.adiciona(aluno7);
+Vetor vetAlunos = new Vetor();
+        vetAlunos.adiciona(aluno1);
 
-vetor.remove(aluno2);
-vetor.remove(aluno4);
+        System.out.println(vetAlunos.contem(aluno1));
+        System.out.println(vetAlunos.getTamanho());
+        System.out.println(vetAlunos.contem(aluno2));
+        System.out.println(vetAlunos.getTamanho());
+        System.out.println(vetAlunos.contem(aluno3));
+    }  
+    
+    
 
-
-// System.out.println(vetor.tamanho());
-// System.out.println(vetor.contem(aluno));
-// System.out.println(vetor.contem(aluno2));
-// System.out.println(vetor.contem(aluno3));
-
-System.out.println(vetor.exibeTodos());
-
+    System.out.println(vetor.exibeTodos());
 
 }
 
-}
+
+
+
+
+
+
+
+
 
