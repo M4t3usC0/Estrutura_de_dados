@@ -1,41 +1,21 @@
-package Atividade1;
+package Atividade5;
 import java.util.Scanner;
+//import Atividade5.LDE;
 
 
-public class Main{
 
-public static void main(String[] args) {
+public class Main {
 
-    Vetor vetor = new Vetor();
-Aluno aluno1 = new Aluno("Gabriel",20,10);
-Aluno aluno2 = new Aluno("Mudinho",20,10);
-Aluno aluno3 = new Aluno("Pedro",20,10);
-Aluno aluno4 = new Aluno("Mateus",20,10);
-Aluno aluno5 = new Aluno("Tales",20,10);
-Aluno aluno6 = new Aluno("Maria", 15, 9);
-Aluno aluno7 = new Aluno("Joao", 18, 8);
+    public static void main(String[] args) {
 
-vetor.adiciona(aluno1);
-vetor.adiciona(aluno2);
-vetor.adiciona(aluno3);
-vetor.adiciona(aluno4);
-vetor.adiciona(aluno5);
-vetor.adiciona(aluno6);
-vetor.adiciona(aluno7);
+        Lista lista = new LDE();
 
-vetor.remove(aluno2);
-vetor.remove(aluno4);
+        lista.insereNoInicio(1);
+        lista.insereNoFinal(2);
 
+        System.out.println(lista.getListaInicio());
+        System.out.println(lista.getListaFim());
 
-// System.out.println(vetor.tamanho());
-// System.out.println(vetor.contem(aluno));
-// System.out.println(vetor.contem(aluno2));
-// System.out.println(vetor.contem(aluno3));
-
-System.out.println(vetor.exibeTodos());
-
-
+    }
+    
 }
-
-}
-

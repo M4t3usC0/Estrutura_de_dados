@@ -2,40 +2,22 @@ package Atividade2;
 import java.util.Scanner;
 
 
-public class Main{
+public class Main {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    PontoCartesiano vetor = new PontoCartesiano();
-PlanoCartesiano aluno1 = new PlanoCartesiano("Gabriel",20,10);
-PlanoCartesiano aluno2 = new PlanoCartesiano("Mudinho",20,10);
-PlanoCartesiano aluno3 = new PlanoCartesiano("Pedro",20,10);
-PlanoCartesiano aluno4 = new PlanoCartesiano("Mateus",20,10);
-PlanoCartesiano aluno5 = new PlanoCartesiano("Tales",20,10);
-PlanoCartesiano aluno6 = new PlanoCartesiano("Maria", 15, 9);
-PlanoCartesiano aluno7 = new PlanoCartesiano("Joao", 18, 8);
+        Aluno aluno1 = new Aluno("João", 20, 7.5);
+        Aluno aluno2 = new Aluno("Maria", 19, 8.5);
+        
+        Aluno aluno3 = new Aluno("João", 20, 7.5);
 
-vetor.adiciona(aluno1);
-vetor.adiciona(aluno2);
-vetor.adiciona(aluno3);
-vetor.adiciona(aluno4);
-vetor.adiciona(aluno5);
-vetor.adiciona(aluno6);
-vetor.adiciona(aluno7);
+        Vetor vetAlunos = new Vetor();
+        vetAlunos.adiciona(aluno1);
 
-vetor.remove(aluno2);
-vetor.remove(aluno4);
-
-
-// System.out.println(vetor.tamanho());
-// System.out.println(vetor.contem(aluno));
-// System.out.println(vetor.contem(aluno2));
-// System.out.println(vetor.contem(aluno3));
-
-System.out.println(vetor.exibeTodos());
-
-
+        System.out.println(vetAlunos.contem(aluno1));
+        System.out.println(vetAlunos.getTamanho());
+        System.out.println(vetAlunos.contem(aluno2));
+        System.out.println(vetAlunos.getTamanho());
+        System.out.println(vetAlunos.contem(aluno3));
+    }    
 }
-
-}
-

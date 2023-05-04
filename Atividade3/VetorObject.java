@@ -1,29 +1,29 @@
 package Atividade3;
 
-public class Vetor implements IVetorAluno {
+public class VetorObject implements IVetorObject {
 
-    private Aluno[] vetor;
+    private Object[] vetor;
     private int total;
 
-    public Vetor(int tamanhoMaximo) {
-        vetor = new Aluno[tamanhoMaximo];
+    public VetorObject(int tamanhoMaximo) {
+        vetor = new Object[tamanhoMaximo];
         total = 0;
     }
 
-    public Vetor() {
-        vetor = new Aluno[3];
+    public VetorObject() {
+        vetor = new Object[3];
         total = 0;
     }
 
-    public void adiciona(Aluno aluno) {
+    public void adiciona(Object object) {
         garanteEspaco();
-        vetor[total] = aluno;
+        vetor[total] = object;
         total++;
     }
 
-    public boolean contem(Aluno aluno) {
+    public boolean contem(Object object) {
         for (int i = 0; i < total; i++) {
-            if (vetor[i].equals(aluno)) {
+            if (vetor[i].equals(object)) {
                 return true;
             } 
         }
@@ -44,7 +44,7 @@ public class Vetor implements IVetorAluno {
 
     private void garanteEspaco() {
         if(cheio()) {
-            Aluno[] novoVetor = new Aluno[vetor.length * 2];
+            Object[] novoVetor = new Object[vetor.length * 2];
             for (int i = 0; i < vetor.length; i++) {
                 novoVetor[i] = vetor[i];
             }
@@ -53,10 +53,10 @@ public class Vetor implements IVetorAluno {
     }
 
     @Override
-    public boolean remove(Aluno aluno) {
+    public boolean remove(Object object) {
         int posicao = -1;
         for (int i = 0; i < total; i++) {
-            if(vetor[i].equals(aluno)) {
+            if(vetor[i].equals(object)) {
                 posicao = i;
                 break;
             }

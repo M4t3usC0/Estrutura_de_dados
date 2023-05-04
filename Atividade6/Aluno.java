@@ -1,6 +1,7 @@
-package Atividade2;
+package Atividade6;
 
-public class Aluno {
+
+public class Aluno{
 
     private String nome;
     private int idade;
@@ -37,11 +38,8 @@ public class Aluno {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        Aluno outro = (Aluno) obj;
-        return this.nome.equals(outro.nome) && this.idade == outro.idade && this.nota == outro.nota;
+    public String toString() {
+        return "Aluno{" + "nome=" + nome + ", idade=" + idade + ", nota=" + nota + '}';
     }
-
-
 
 }
