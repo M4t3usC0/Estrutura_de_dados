@@ -1,5 +1,6 @@
 package Atividade1;
 
+
 public class PlanoCartesiano {
 
     private PontoCartesiano p1;
