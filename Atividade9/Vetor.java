@@ -1,6 +1,5 @@
 package Atividade9;
 
-
 public class Vetor {
 
     private int[] vetor;
@@ -20,7 +19,7 @@ public class Vetor {
         for (int i = 0; i < total; i++) {
             if (vetor[i] == numero) {
                 return true;
-            } 
+            }
         }
         return false;
     }
@@ -33,33 +32,29 @@ public class Vetor {
         for (int i = 0; i < total; i++) {
             for (int j = 0; j < total - 1; j++) {
                 if (vetor[j] > vetor[j + 1]) {
-                    int aux = vetor[j];
-                    vetor[j] = vetor[j + 1];
-                    vetor[j + 1] = aux;
+                    trocarElementos(j, j + 1);
                 }
             }
         }
     }
 
     public void selectionSort() {
-        for(int i = 0; i < total; i++) {
+        for (int i = 0; i < total; i++) {
             int menor = i;
-            for(int j = i + 1; j < total; j++) {
-                if(vetor[j] < vetor[menor]) {
+            for (int j = i + 1; j < total; j++) {
+                if (vetor[j] < vetor[menor]) {
                     menor = j;
                 }
             }
-            int aux = vetor[i];
-            vetor[i] = vetor[menor];
-            vetor[menor] = aux;
+            trocarElementos(i, menor);
         }
     }
 
     public void insertionSort() {
-        for(int i = 1; i < total; i++) {
+        for (int i = 1; i < total; i++) {
             int chave = vetor[i];
             int j = i - 1;
-            while(j >= 0 && vetor[j] > chave) {
+            while (j >= 0 && vetor[j] > chave) {
                 vetor[j + 1] = vetor[j];
                 j--;
             }
@@ -67,5 +62,9 @@ public class Vetor {
         }
     }
 
-
+    private void trocarElementos(int indice1, int indice2) {
+        int aux = vetor[indice1];
+        vetor[indice1] = vetor[indice2];
+        vetor[indice2] = aux;
+    }
 }

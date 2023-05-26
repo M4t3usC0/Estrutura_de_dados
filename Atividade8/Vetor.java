@@ -1,7 +1,6 @@
 package Atividade8;
 
 public class Vetor {
-
     private int[] vetor;
     private int total;
 
@@ -11,15 +10,19 @@ public class Vetor {
     }
 
     public void adiciona(int numero) {
-        vetor[total] = numero;
-        total++;
+        if (total < vetor.length) {
+            vetor[total] = numero;
+            total++;
+        } else {
+            System.out.println("Erro: vetor está cheio!");
+        }
     }
 
     public boolean contem(int numero) {
         for (int i = 0; i < total; i++) {
             if (vetor[i] == numero) {
                 return true;
-            } 
+            }
         }
         return false;
     }
@@ -63,5 +66,4 @@ public class Vetor {
             return buscaBinariaRecursiva(numero, inicio, meio - 1);
         }
     }
-
 }
