@@ -43,7 +43,7 @@ public class LDE implements Lista {
 
     @Override
     public boolean verificaVazia() {
-        return inicio == null || f == null;
+        return inicio == null || fim == null;
     }
 
     @Override

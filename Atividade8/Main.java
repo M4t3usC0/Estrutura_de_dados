@@ -1,18 +1,38 @@
-package Atividade1;
+package Atividade8;
 
-//atividade 1 vetor estrutura de dados
+
+import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
-        PontoCartesiano ponto1 = new PontoCartesiano(2, 6);
-        PontoCartesiano ponto2 = new PontoCartesiano(2, 10);
+    public static void main(String[] args) throws InterruptedException {
+        int n = 10000;
 
-        PlanoCartesiano pc = new PlanoCartesiano();
-        pc.setP1(ponto1);
-        pc.setP2(ponto2);
+        Random gerador = new Random();
 
-        System.out.println("Distância: " + pc.calcularDistanciaEuclidiana());
+        Vetor vetor = new Vetor(n);
+
+        for(int j = 0; j < n; j++) {
+            int numeroAleatorio = gerador.nextInt(1000);
+            vetor.adiciona(numeroAleatorio);
+        }
+
+        int numeroAleatorio = gerador.nextInt(1000);
+
+        long tempoComeco = System.nanoTime();
+        boolean buscaBinariaIterativa = vetor.buscaBinariaIterativa(numeroAleatorio);
+        long tempoFinal = System.nanoTime();
+
+        long duracao = tempoFinal - tempoComeco;
+
+        System.out.println("Busca iterativa; Encontrado: " + buscaBinariaIterativa + "; Tempo: " + duracao + "ns");
+
+        tempoComeco = System.nanoTime();
+        boolean buscaBinariaRecursiva = vetor.buscaBinariaRecursiva(numeroAleatorio);
+        tempoFinal = System.nanoTime();
+
+        duracao = tempoFinal - tempoComeco;
+
+        System.out.println("Busca recursiva; Encontrado: " + buscaBinariaRecursiva + "; Tempo: " + duracao + "ns");
     }
-    
 }

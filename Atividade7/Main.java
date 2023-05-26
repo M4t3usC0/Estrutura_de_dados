@@ -1,18 +1,34 @@
-package Atividade1;
+package Atividade7;
 
-//atividade 1 vetor estrutura de dados
+import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
-        PontoCartesiano ponto1 = new PontoCartesiano(2, 6);
-        PontoCartesiano ponto2 = new PontoCartesiano(2, 10);
+    public static void main(String[] args) throws InterruptedException {
+        int n = 1000;
 
-        PlanoCartesiano pc = new PlanoCartesiano();
-        pc.setP1(ponto1);
-        pc.setP2(ponto2);
+        Random gerador = new Random();
 
-        System.out.println("Distância: " + pc.calcularDistanciaEuclidiana());
+        Vetor vetor = new Vetor(n);
+
+        for(int j = 0; j < n; j++) {
+            int numeroAleatorio = gerador.nextInt();
+            vetor.adiciona(numeroAleatorio);
+        }
+
+        long tempoComeco = System.nanoTime();
+        int maximoIterativa = vetor.maximoIterativa();
+        long tempoFinal = System.nanoTime();
+
+        long duracao = tempoFinal - tempoComeco;
+       
+        System.out.println("Máximo iterativa: " + maximoIterativa + "; Tempo: " + duracao + "ns");
+        
+        tempoComeco = System.nanoTime();
+        int maximoRecursiva = vetor.maximoRecursiva();
+        tempoFinal = System.nanoTime();
+        duracao = tempoFinal - tempoComeco;
+        
+        System.out.println("Máximo recursiva: " + maximoRecursiva + "; Tempo: " + duracao + "ns");
     }
-    
 }
